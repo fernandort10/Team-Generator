@@ -67,4 +67,7 @@
     color: red;
   }
 
- 
+ .refresh-button{
+  color: white;
+  background-color: lightsalmon;
+ }

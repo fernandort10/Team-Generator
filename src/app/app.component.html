@@ -17,7 +17,7 @@
 
     <div class="input-container">
       <input
-      #numberOfTeamsInput
+        #numberOfTeamsInput
         type="number"
         placeholder="# teams"
         (input)="onNumberOfTeamsInput(numberOfTeamsInput.value)"
@@ -25,13 +25,16 @@
       />
       <button (click)="generateTeam()">Generate</button>
     </div>
-
+    <button class="refresh-button" (click)="refreshPage()">Reset</button>
     <p *ngIf="errMessage" class="error-message">{{ errMessage }}</p>
   </div>
 
   <div *ngIf="teams.length" class="teams-container">
-      <app-team *ngFor="let team of teams; let i =index" [team]="team" [index]="i">
-      
-      </app-team>
+    <app-team
+      *ngFor="let team of teams; let i = index"
+      [team]="team"
+      [index]="i"
+    >
+    </app-team>
   </div>
 </div>

@@ -66,4 +66,8 @@ export class AppComponent {
     this.members = []
     this.numberOfTeams = ""
   }
+
+  refreshPage(){
+    window.location.reload();
+  }
 }
